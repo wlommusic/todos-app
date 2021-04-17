@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+
+  <body>
+    <div class="clock"></div>
+
+    <div class="container">
+      <header class="text-center text-dark my-4">
+        <h1 class="heading mb-4">Todo List</h1>
+        <form class="search">
+          <input
+            class="form-control m-auto"
+            type="text"
+            name="search"
+            placeholder="search todos......"
+          />
+        </form>
+      </header>
+
+      <ul class="list-group todos mx-auto text-light">
+        <!-- <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span>Play Games</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span>Learn javascript</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <span>sleep</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li> -->
+      </ul>
+
+      <form class="add text-center my-4">
+        <p class="heading">Add a new todo...</p>
+        <input class="form-control m-auto" type="text" id="add" />
+      </form>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+     <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDbCDkXYCdFnBdx4PmmwNVgMaXsLZo15OM",
+        authDomain: "vanillajs-e2f0e.firebaseapp.com",
+        projectId: "vanillajs-e2f0e",
+        storageBucket: "vanillajs-e2f0e.appspot.com",
+        messagingSenderId: "740359048453",
+        appId: "1:740359048453:web:1207a26c23b825978e7b6c",
+        measurementId: "G-ES9MX72222",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+
+    <script src="clock.js"></script>
+    <script src="script.js"></script>
+    <script src="firebase.js"></script>
+</body>
+</html>
